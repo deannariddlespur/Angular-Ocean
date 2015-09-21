@@ -25,15 +25,32 @@ This repository has the intention of help you automatizes your deploy with aditi
 2. Setup the git repo
  ```
     $ apt-get install git
+```
+
+```
     $ npm install bower -g
+```
+```
     $ cd /home/
+```
+
+```
     $ mkdir repo angular_project
+```
+
+```
     $ cd repo
+```
+
+```
     $ git init --bare
+```
+
+```
     $ cd hooks
 ```
 3. Create or edit your post-receive with the script below
-    ````
+```
     #!/bin/sh
     git --work-tree=/home/angular_project/ --git-dir=/home/repo checkout -f
 
