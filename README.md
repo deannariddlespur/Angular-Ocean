@@ -19,11 +19,11 @@ This repository has the intention of help you automatizes your deploy with aditi
 
 ### Setup your droplet
 1. connect to you droplet via ssh
-   ````
+```
     $ssh root@<droplet IP address> (use your droplet IP address)
-   ````
+```
 2. Setup the git repo
-    ````
+ ```
     $ apt-get install git
     $ npm install bower -g
     $ cd /home/
@@ -31,7 +31,7 @@ This repository has the intention of help you automatizes your deploy with aditi
     $ cd repo
     $ git init --bare
     $ cd hooks
-    ````
+```
 3. Create or edit your post-receive with the script below
     ````
     #!/bin/sh
@@ -43,29 +43,29 @@ This repository has the intention of help you automatizes your deploy with aditi
     bower install --allow-root
 
     PORT=80 pm2 reload server.js
-    ````
+```
 4. Make the hook executable
-    ````
+```
     $ chmod +x post-receive
-    ````
+```
 
 5. Add production remote to local environment
-    ````
+```
     $ git remote add production ssh://root@<Droplet Ip adrees>/home/repo
-    ````
+```
 6. Push code to new production remote
-    ````
+```
     $ git push production master
-    `````
+````
     - if that fails, use this
-        ````
+```
         $ git push production master --force
-        ````
+```
 7. Once you push you project to production set project server as pm2 task.
 
     This will register a pm2 task that work as deamon, and we could then reload with every deploy
-    ````
+```
     $ cd /home/angular_project
     $ npm install -g pm2
     $ pm2 start server.js
-    ````
+```
