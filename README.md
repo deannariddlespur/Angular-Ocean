@@ -1,6 +1,7 @@
 # Angular skeleton project for deploy to digitalocean
 [![Deploy](https://assets.digitalocean.com/blog/sammy-cleaning-up.png)]
-[![Deploy](https://assets.digitalocean.com/blog/sammy-cleaning-up.png)](https://www.digitalocean.com)
+[!(http://angularconnect.com/perch/resources/angular.png)](https://www.digitalocean.com)
+
 This repository has the intention of help you automatizes your deploy with aditional instructions to deploy into digitalocean.
 
 ## Getting Started
