@@ -23,7 +23,7 @@ This repository has the intention of help you automatizes your deploy with aditi
     $ssh root@<droplet IP address> (use your droplet IP address)
 ```
 2. Setup the git repo
- ```
+```
     $ apt-get install git
 ```
 
@@ -73,8 +73,9 @@ This repository has the intention of help you automatizes your deploy with aditi
 6. Push code to new production remote
 ```
     $ git push production master
-````
-    - if that fails, use this
+```
+if that fails, use this
+
 ```
         $ git push production master --force
 ```
